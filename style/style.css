@@ -1,0 +1,269 @@
+/*24BA9F*/
+/*rozwijalne submenu!!!!!!!!!!!
+
+.hidden{
+  display:none;
+  background-color:black;
+  color:white;
+  width:200px;
+  height:100px;
+}
+.class:hover .hidden{
+  display:block;
+}
+
+background-attachment:fixed;
+
+*/
+
+
+*{
+margin: 0;
+padding: 0;
+border: 0;
+line-height: 1.4em;
+vertical-align: baseline;
+text-decoration: none;
+outline: 0;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Header */
+
+.main_width{
+  width:1000px;
+  margin:0 auto;
+}
+
+header.black_line{
+  width:100%;
+  height:70px;
+  background-color: #000;
+}
+
+.logo{
+  color:white;
+  font-size:20px;
+  font-weight: 700;
+  float:left;
+  display:inline-block;
+  line-height: 70px;
+  text-transform:uppercase;
+}
+
+.logo a{
+  color:inherit;
+}
+
+.logo span{
+  color:#24BA9F;
+}
+
+.nav_header{
+  float:right;
+}
+
+li{
+  display:inline-block;
+  margin-left:40px;
+  font-size:20px;
+  font-weight:700;
+  color:#FFF;
+  line-height:70px;
+}
+
+#submenu a:hover < #submenu ul{
+    display:inline-block;
+}
+
+#submenu ul{
+  display:none;
+  position:absolute;
+  width:100px;
+  height:200px;
+  background-color:red;
+}
+#submenu ul li{
+  display:none;
+  position:absolute;
+  width:33px;
+  height:66px;
+}
+/* Slider  */
+
+
+.slider{
+  width:100%;
+  height:500px;
+  box-sizing:border-box;
+  position:relative;
+  background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 12%, rgba(227,227,227,1) 96%, rgba(217,217,217,1) 100%);
+}
+
+.main_content{
+  height:500px;
+}
+
+.left_indicator{
+  line-height:500px;
+  font-size:65px;
+  color: #24BA9F;
+  display:inline-block;
+  float:left;
+}
+
+.left_indicator a{
+  color: #24BA9F;
+}
+
+.left_indicator a:hover{
+  color:#13AA8E;
+}
+
+.left_indicator::after{
+  clear:both;
+}
+
+.slider_picture{
+  display:inline-block;
+  margin:45px 0;
+}
+
+.slider_picture img{
+  height: 120%;
+  width:120%;
+}
+
+.picture_description{
+  display:inline-block;
+  width:370px;
+  position:absolute;
+  top:120px;
+  text-align: center;
+  margin-left:30px;
+}
+
+h1{
+  font-size:40px;
+  word-spacing:3px;
+  text-transform: uppercase;
+  margin-bottom:20px;
+}
+
+h1 span{
+  color:#24BA9F;
+}
+
+.picture_description p{
+  word-spacing: 4px;
+}
+
+.picture_description a{
+  padding:10px 25px 10px 25px;
+  background-color: #24BA9F;
+  color:white;
+  display:inline-block;
+  border-radius:5px;
+  text-transform: uppercase;
+  margin-top:20px;
+}
+.picture_description a:hover{
+  background-color:#13AA8E;
+}
+.right_indicator{
+  line-height:500px;
+  font-size:65px;
+  color: #24BA9F;
+  display:inline-block;
+  float:right;
+}
+
+.right_indicator a{
+  color: #24BA9F;
+}
+
+.right_indicator a:hover{
+  color:#13AA8E;
+}
+
+/*Windows*/
+
+.windows{
+  height:350px;
+  box-sizing: border-box;
+}
+
+.windows_picture1{
+  width:280px;
+  height:191px;
+  display:inline-flex;
+  margin-right:72px;
+  margin-top:50px;
+  background-image:url("../pictures/box1_img.jpg");
+  background-size: contain;
+  position:relative;
+  border:1px solid rgba(220,220,220,1);
+}
+
+.windows_picture1_title p{
+  width:120px;
+  position:absolute;
+  bottom:40px;
+  font-size:16px;
+  font-weight: 700;
+  border-bottom: 8px solid #24BA9F;
+  margin-left:10px;
+  padding:0 auto;
+}
+
+
+.windows_picture2{
+  width:280px;
+  height:191px;
+  display:inline-flex;
+  margin-right:72px;
+  margin-top:50px;
+  background-image:url("../pictures/box2_img.jpg");
+  background-size: contain;
+  position:absolute;
+  border:1px solid rgba(220,220,220,1);
+}
+
+
+.windows_picture2 p{
+  width:140px;
+  position:absolute;
+  bottom:40px;
+  font-size:16px;
+  font-weight: 700;
+  border-bottom: 8px solid #24BA9F;
+  margin-left:10px;
+}
+
+.windows_content::before{
+  clear:both;
+}
+
+.windows_content{
+  float:right;
+  width:280px;
+  height:221px;
+  margin-top:50px;
+  border:1px dotted rgba(210,210,210,1);
+}
+
+h2{
+  border-bottom:8px solid #24BA9F;
+  width:120px;
+  font-size:15px;
+  margin:20px 20px 10px 20px;
+}
+
+.windows_content p{
+  margin:10px 20px 18px 20px;
+  font-size:13px;
+  color:#606060;
+}
