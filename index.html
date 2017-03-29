@@ -10,23 +10,36 @@
 <body>
   <header class="black_line">
     <div class="main_width">
-      <div class="logo">
+      <div class="logo main">
         <a href="#">Sit <span>on</span> chair</a>
       </div>
-        <ul class="nav_header">
-          <li id="submenu"><a href="#">o firmie</a>
-            <ul>
-              <li>Aktualności</li>
-              <li>Nasz team</li>
-              <li>Historia</li>
+    <div>
+        <ul class="nav_header hover">
+          <li id="submenu">
+            <a href="#">o firmie</a>
+            <ul class="hidden">
+              <li class="sub1">
+                  <a href="#">Aktualności</a>
+              </li>
+              <li class="sub2">
+                  <a href="#">Nasz team</a>
+              </li>
+              <li class="sub3">
+                  <a href="#">Historia</a>
+              </li>
             </ul>
           </li>
-          <li>galeria</li>
-          <li>kontakt</li>
+          <li>
+              <a href="#">galeria</a>
+          </li>
+          <li>
+              <a href="#">kontakt</a>
+          </li>
         </ul>
     </div>
   </header>
   <!---Slider------------------------------->
+
   <section class="slider">
     <div class="main_width main_content">
       <div class="left_indicator">
@@ -58,11 +71,15 @@
   <section class="windows main_width">
     <div class="windows_picture1">
       <div class="windows_picture1_title">
-          <p>Chair CLAIR</p>
+          <div class="background">
+              <p>Chair CLAIR</p>
+          </div>
       </div>
     </div>
     <div class="windows_picture2">
-      <p>Chair MARGARITA</p>
+        <div class="background2">
+            <p>Chair MARGARITA</p>
+        </div>
     </div>
     <div class="windows_content">
       <h2>
@@ -80,6 +97,145 @@
 
     </div>
   </section>
+<!--offerts---------------------------------->
+  <section class="offert">
+      <div class="main_width" >
+            <h3>
+                Cennik
+            </h3>
 
+            <div class="offert_box">
+                <div class="circle">
+                    <div class="circle_inside">
+                    </div>
+                </div>
+                <h4>
+                    Basic plan
+                </h4>
+                <div class="prize_circle">
+                    <div class="prize">
+                        <p>
+                            85<sup>99</sup>
+                        </p>
+                        <p class="value">
+                            PLN/MSC
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box_line1">
+                    <p>Zakup towaru + dowóz</p>
+                </div>
+                <div class="box_line2">
+                    <p>Serwis</p>
+                </div>
+                <input type="button" value="dołącz">
+            </div>
+
+            <div class="offert_box">
+                <div class="circle">
+                    <div class="circle_inside">
+                    </div>
+                </div>
+                <h4>
+                    Standard plan
+                </h4>
+                <div class="prize_circle">
+                    <div class="prize">
+                        <p>
+                            95<sup>99</sup>
+                        </p>
+                        <p class="value">
+                            PLN/MSC
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box_line1">
+                    <p>Zakup towaru + dowóz</p>
+                </div>
+                <div class="box_line2">
+                    <p>Serwis</p>
+                </div>
+                <div class="box_line3">
+                    <p>Gwarancja 5 lat</p>
+                </div>
+                <input type="button" value="dołącz">
+            </div>
+
+            <div class="offert_box">
+                <div class="circle">
+                    <div class="circle_inside">
+                    </div>
+                </div>
+                <h4>
+                    Advance plan
+                </h4>
+                <div class="prize_circle">
+                    <div class="prize">
+                        <p>
+                            211<sup>00</sup>
+                        </p>
+                        <p class="value">
+                            PLN/MSC
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box_line1">
+                    <p>Zakup towaru + dowóz</p>
+                </div>
+                <div class="box_line2">
+                    <p>Serwis</p>
+                </div>
+                <div class="box_line3">
+                    <p>Gwarancja 6 lat</p>
+                </div>
+                <div class="box_line4">
+                    <p>Porady projektanta</p>
+                </div>
+                <input type="button" value="dołącz">
+            </div>
+
+
+
+      </div>
+
+  </section>
+
+  <section class="to_send main_width">
+
+          <form class="left">
+              <h3>
+                  Kontakt
+              </h3>
+              <fieldset>
+                  <input name="name" type="text" placeholder="Imię">
+                  <input name="email" type="email" placeholder="email">
+                  <textarea placeholder="Wiadomość"></textarea>
+              </fieldset>
+          </form>
+
+          <div class="right">
+              <img src="pictures/red_chair.png">
+                <div class="label">
+                  <input name="checkbox" type="checkbox">
+                  <label for="checkbox">Zgadzam się na przetwarzanie danych osobowych</label>
+                </div>
+              <input type="submit" value="Wyślij">
+          </div>
+  </section>
+  <footer class="main_width">
+          <span class="footer_left">
+              Copyright 2014 | All rights Reserverd - Sit On Chair
+          </span>
+          <span class="footer_right">
+              <a href="#"><img src="pictures/flickr.png"></a>
+              <a href="#"><img src="pictures/vimeo.png"></a>
+              <a href="#"><img src="pictures/pinterest.png"></a>
+              <a href="#"><img src="pictures/twitter.png"></a>
+              <h5>Sit <span>on</span> chair</h5>
+          </span>
+  </footer>
 </body>
 </html>

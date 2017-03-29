@@ -1,21 +1,6 @@
 /*24BA9F*/
 /*rozwijalne submenu!!!!!!!!!!!
-
-.hidden{
-  display:none;
-  background-color:black;
-  color:white;
-  width:200px;
-  height:100px;
-}
-.class:hover .hidden{
-  display:block;
-}
-
-background-attachment:fixed;
-
 */
-
 
 *{
 margin: 0;
@@ -27,11 +12,16 @@ text-decoration: none;
 outline: 0;
 }
 
+
+/*submenu*/
+
 body{
   font-family: 'Raleway', sans-serif;
 }
 
-/* Header */
+a{
+    color:inherit;
+}
 
 .main_width{
   width:1000px;
@@ -52,6 +42,15 @@ header.black_line{
   display:inline-block;
   line-height: 70px;
   text-transform:uppercase;
+}
+
+.logo::before, .logo::after,
+.nav_header::before, .nav_header::after,
+.left_indicator::before, .left_indicator::after,
+.right_indicator::before, .right_indicator::after,
+.windows_content::before, .windows_content::after,
+.offert_box::before, .offert_box::after{
+    clear:both;
 }
 
 .logo a{
@@ -75,22 +74,40 @@ li{
   line-height:70px;
 }
 
-#submenu a:hover < #submenu ul{
-    display:inline-block;
+.hidden li{
+  display:inline-block;
+  margin-left:10px;
+  margin-bottom:10px;
+  font-size:20px;
+  font-weight:700;
+  line-height:0px;
 }
 
-#submenu ul{
-  display:none;
-  position:absolute;
-  width:100px;
-  height:200px;
-  background-color:red;
+.nav_header a:hover{
+    color: #24BA9F;
 }
-#submenu ul li{
-  display:none;
+
+
+#submenu ul{
   position:absolute;
-  width:33px;
-  height:66px;
+  width:130px;
+  height:110px;
+  background-color:#000;
+  z-index: 1;
+  margin-left:-30px;
+  visibility:hidden;
+}
+
+#submenu:first-child:hover ul{
+    visibility:visible;
+}
+
+
+
+
+#submenu ul li{
+  width:auto;
+  float:left;
 }
 /* Slider  */
 
@@ -103,9 +120,6 @@ li{
   background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 12%, rgba(227,227,227,1) 96%, rgba(217,217,217,1) 100%);
 }
 
-.main_content{
-  height:500px;
-}
 
 .left_indicator{
   line-height:500px;
@@ -197,37 +211,56 @@ h1 span{
 }
 
 .windows_picture1{
-  width:280px;
+  width:315px;
   height:191px;
   display:inline-flex;
-  margin-right:72px;
+  margin-right:24px;
   margin-top:50px;
   background-image:url("../pictures/box1_img.jpg");
-  background-size: contain;
+  background-size: cover;
   position:relative;
   border:1px solid rgba(220,220,220,1);
 }
+.background{
+    width:305px;
+    margin-left:-10px;
+    padding-left:10px;
+    background-color:rgba(248,248,248,0.3);
+    height:60px;
+    margin-bottom:-30px;
+}
 
-.windows_picture1_title p{
-  width:120px;
-  position:absolute;
-  bottom:40px;
-  font-size:16px;
-  font-weight: 700;
-  border-bottom: 8px solid #24BA9F;
-  margin-left:10px;
-  padding:0 auto;
+.background2{
+    width:305px;
+    padding-left:10px;
+    background-color:rgba(248,248,248,0.3);
+    height:60px;
+    margin-bottom:-30px;
+    position:absolute;
+    bottom:48px
+}
+
+.windows_picture1_title{
+    width:120px;
+    position:absolute;
+    bottom:40px;
+    font-size:16px;
+    font-weight: 700;
+    border-bottom: 8px solid #24BA9F;
+    margin-left:10px;
+    padding:0 auto;
 }
 
 
+
 .windows_picture2{
-  width:280px;
+  width:315px;
   height:191px;
   display:inline-flex;
-  margin-right:72px;
+  margin-right:24px;
   margin-top:50px;
   background-image:url("../pictures/box2_img.jpg");
-  background-size: contain;
+  background-size: cover;
   position:absolute;
   border:1px solid rgba(220,220,220,1);
 }
@@ -236,7 +269,6 @@ h1 span{
 .windows_picture2 p{
   width:140px;
   position:absolute;
-  bottom:40px;
   font-size:16px;
   font-weight: 700;
   border-bottom: 8px solid #24BA9F;
@@ -249,7 +281,7 @@ h1 span{
 
 .windows_content{
   float:right;
-  width:280px;
+  width:315px;
   height:221px;
   margin-top:50px;
   border:1px dotted rgba(210,210,210,1);
@@ -266,4 +298,295 @@ h2{
   margin:10px 20px 18px 20px;
   font-size:13px;
   color:#606060;
+}
+
+
+/*Ofert*/
+
+.offert{
+    background-color: #FCFCFC;
+    height:650px;
+}
+
+h3{
+        text-transform:uppercase;
+        font-weight:400;
+        border-bottom: 8px solid #24BA9F;
+        display:block;
+        width:315px;
+        padding-top:30px;
+        color:#444444;
+}
+
+.offert_box{
+    background-color:#FEFEFE;
+    border:1px solid #E8E8E8;
+    width:315px;
+    height:470px;
+    margin-top:50px;
+    position:relative;
+    display:inline-block;
+    margin-right:22px;
+    float:left;
+}
+
+/*HOVER*/
+
+.offert_box:hover input[value="dołącz"]{
+    background-color:#FEFEFE;
+    color:#24BA9F;
+    transition:0.7s;
+}
+
+.offert_box:hover .circle{
+    background-color:#24BA9F;
+    transition:0.7s;
+    border:none;
+}
+
+.offert_box:hover .circle_inside{
+        background-color:#FAFAFA;
+        transition:0.7s;
+}
+
+.offert_box:hover .prize{
+    color:#24BA9F;
+    transition:0.7s;
+}
+
+.offert_box:hover{
+    background-color:#24BA9F;
+    transition:0.7s;
+}
+
+
+.offert_box:last-of-type{
+    margin-right: 0.7px;
+}
+
+.offert_box:hover h4{
+    color:#FAFAFA;
+}
+
+
+.circle{
+    border:1px solid #E8E8E8;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    position:absolute;
+    background-color:#FFF;
+    top:-32px;
+    left:50%;
+    margin-left:-22px;
+}
+
+.circle_inside{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background-color:#CFCFCF;
+    margin:12px auto;
+}
+
+h4{
+    text-transform: uppercase;
+    color: #24BA9F;
+    font-weight: 400;
+    font-size:20px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.prize_circle{
+    width:115px;
+    height:115px;
+    border:1px solid #E8E8E8;
+    border-radius:50%;
+    background-color:#FDFDFD;
+    margin:20px auto 30px auto;
+}
+
+.prize{
+    font-size:40px;
+    color:#DDDDDD;
+    text-align:center;
+    font-weight:700;
+    margin-top:12px;
+}
+.prize p sup{
+    font-size:15px;
+    vertical-align: super;
+    font-weight:400;
+}
+
+.value{
+    font-size:15px;
+}
+
+
+.box_line1{
+    background-color:#F6F6F6;
+    text-align:center;
+    color:#B5B5B5;
+    padding:8px 0;
+    font-size:20px;
+}
+
+.box_line2{
+    background-color:#FCFCFC;
+    text-align:center;
+    color:#C5B5B5;
+    padding:8px 0;
+    font-size:20px;
+}
+
+.box_line3{
+    background-color:#F6F6F6;
+    text-align:center;
+    color:#B5B5B5;
+    padding:8px 0;
+    font-size:20px;
+}
+
+.box_line4{
+    background-color:#FCFCFC;
+    text-align:center;
+    color:#B5B5B5;
+    padding:8px 0;
+    font-size:20px;
+}
+
+.offert_box input{
+    background-color:#24BA9F;
+    text-transform:uppercase;
+    color:#EFEFEF;
+    border-radius:9px;
+    padding:6px 25px;
+    font-size:15px;
+    position: absolute;
+    left:50%;
+    margin-left:-55.5px;
+    bottom:20px;
+}
+/*form*/
+
+form{
+    width:600px;
+}
+.to_send{
+    height:500px;
+    box-sizing: border-box;
+}
+
+.left{
+    display:inline-block;
+}
+
+.left input{
+    border:1px solid #46DCBF;
+    width:590px;
+    height:45px;
+    margin-top:30px;
+    font-size:25px;
+    text-indent:15px;
+    opacity:0.7
+}
+
+textarea{
+    resize:none;
+    border:1px solid #46DCBF;
+    margin-top:30px;
+    font-size:25px;
+    text-indent:15px;
+    opacity:0.7;
+    width:590px;
+    height:170px;
+    line-height: 50px;
+}
+
+.right{
+    display:inline-block;
+    width:390px;
+    height:350px;
+    float:right;
+    margin-top:70px;
+    position:relative;
+
+}
+
+.right img{
+    height:180px;
+    width:234px;
+    display:block;
+    margin:0 auto;
+}
+
+.label{
+    display:inline-block;
+    margin-top:30px;
+    margin-left:53px;
+    color: #B5B5B5;
+    margin-right:15px;
+    font-size:17px;
+}
+
+
+input[name="checkbox"]{
+    width:40px;
+    height:40px;
+    display:inline-block;
+    vertical-align: text-top;
+    float:left;
+    margin-right:15px;
+}
+
+
+
+/*input[type="checkbox"]:checked+label{
+    background: url("../pictures/form_ok.jpg") no-repeat;
+    position:absolute;
+}*/
+
+input[type="submit"]{
+    background-color:#24BA9F;
+    width:320px;
+    position:absolute;
+    bottom:0px;
+    left:51px;
+    padding:10px;
+    font-size:35px;
+    text-transform: uppercase;
+    color:white;
+    border-radius:10px;
+}
+
+
+/*footer*/
+footer{
+    height:70px;
+}
+
+.footer_left{
+    color:#A4A4A4;
+    line-height: 35px;
+    font-size:18px;
+}
+
+.footer_right{
+    float:right;
+}
+
+h5{
+    float:right;
+    text-transform:uppercase;
+    font-size:20px;
+    line-height: 35px;
+    margin-left:50px;
+    word-spacing: 5px;
+    color:#A5A5A5;
+}
+
+h5 span{
+    color:#8B8B8B;
 }
