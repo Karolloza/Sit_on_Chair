@@ -246,9 +246,9 @@ h1 span{
     bottom:40px;
     font-size:16px;
     font-weight: 700;
-    border-bottom: 8px solid #24BA9F;
+    border-bottom: 8px solid rgb(36, 186, 161);
     margin-left:10px;
-    padding:0 auto;
+    padding-right:15px;
 }
 
 
@@ -272,7 +272,7 @@ h1 span{
   font-size:16px;
   font-weight: 700;
   border-bottom: 8px solid #24BA9F;
-  margin-left:10px;
+  padding-bottom:8px;
 }
 
 .windows_content::before{
